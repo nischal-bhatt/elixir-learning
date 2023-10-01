@@ -38,4 +38,11 @@ defmodule Cards do
     end
 
   end
+
+  def loadAnother(fileName) do
+    case File.read(fileName) do
+      {:ok, binary } -> :erlang.binary_to_term(binary)
+      {:error, _reason} -> "No existing available"
+    end
+  end
 end
