@@ -26,6 +26,17 @@ defmodule Cards do
     Enum.shuffle(deck)
 
   end
+
+  @doc """
+    Determines if deck contains
+
+  ## Examples
+
+      iex(1)> deck = Cards.create_deck
+      iex(2)> Cards.contains?(deck,"Diamonds of Three")
+      true
+  """
+
   def contains?(deck, hand) do
     Enum.member?(deck, hand)
   end
